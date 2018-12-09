@@ -29,7 +29,7 @@ public class TeamService {
   private Team buildInitialTeam() {
     final Team presenters = new Team();
     presenters.setIsPresenter(true);
-    presenters.setName("Presenters");
+    presenters.setName("presenters");
 
     final List<Ninja> ninjas = new ArrayList<>();
     final Ninja ninjaRomero = new Ninja();
