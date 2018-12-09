@@ -22,7 +22,7 @@ public class BeltsService {
 
   @PostConstruct
   public void loadPresenters() {
-    template.remove(Query.query(Criteria.where("teamName").is("presenters")), ListOfBelts.class)
+    template.remove(Query.query(Criteria.where("teamName").is("presenters")), ListOfBelts.class);
     template.save(buildInitialListOfBelts());
   }
 
