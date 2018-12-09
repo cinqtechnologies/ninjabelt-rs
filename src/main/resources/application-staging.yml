@@ -5,4 +5,4 @@ ninja:
 spring:
   data:
     mongodb:
-      uri: mongodb://staginguser:jxdojostg@mongodb-staging:27017/teams-stg
+      uri: mongodb://staginguser:jxdojostg@mongodb:27017/teams-stg
