@@ -22,7 +22,7 @@ public class BeltsService {
 
   @PostConstruct
   public void loadPresenters() {
-    if (!template.exists(Query.query(Criteria.where("teamName").is("Presenters")), ListOfBelts.class)) {
+    if (!template.exists(Query.query(Criteria.where("teamName").is("presenters")), ListOfBelts.class)) {
       template.save(buildInitialListOfBelts());
     }
   }
@@ -31,7 +31,7 @@ public class BeltsService {
     final ListOfBelts list = new ListOfBelts();
     final List<Belt> belts = new ArrayList<>();
 
-    list.setTeamName("Presenters");
+    list.setTeamName("presenters");
 
     final Belt white = buildBelt("1", "white");
     final Belt yellow = buildBelt("2", "yellow");

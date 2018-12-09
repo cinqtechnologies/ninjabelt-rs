@@ -25,12 +25,12 @@ public class BeltsController {
   }
 
   @RequestMapping(
-      value = "/Presenters",
+      value = "/presenters",
       produces = MediaType.APPLICATION_JSON_UTF8_VALUE
   )
   public ResponseEntity<ListOfBelts> getBelts() {
     final ListOfBelts presentersBelts = beltsTransformer
-        .transform(beltsService.getBeltForTeam("Presenters"));
+        .transform(beltsService.getBeltForTeam("presenters"));
     if(presentersBelts == null) {
       return ResponseEntity.notFound().build();
     }
