@@ -22,6 +22,7 @@ public class BeltsService {
 
   @PostConstruct
   public void loadPresenters() {
+    template.remove(Query.query(Criteria.where("belts[any].name").is("red")), ListOfBelts.class);
     if (!template.exists(Query.query(Criteria.where("teamName").is("presenters")), ListOfBelts.class)) {
       template.save(buildInitialListOfBelts());
     }
@@ -35,7 +36,7 @@ public class BeltsService {
 
     final Belt white = buildBelt("1", "white");
     final Belt yellow = buildBelt("2", "yellow");
-    final Belt red = buildBelt("3", "red");
+    final Belt red = buildBelt("3", "orange");
     final Belt brown = buildBelt("4", "brown");
     final Belt black = buildBelt("5", "black");
 
@@ -45,10 +46,10 @@ public class BeltsService {
     return list;
   }
 
-  private Belt buildBelt(final String id, final String namme) {
+  private Belt buildBelt(final String id, final String name) {
     final Belt belt = new Belt();
     belt.setId(id);
-    belt.setName(namme);
+    belt.setName(name);
     return belt;
   }
 
