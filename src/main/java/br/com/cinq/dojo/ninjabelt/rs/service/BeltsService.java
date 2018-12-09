@@ -31,7 +31,7 @@ public class BeltsService {
     final ListOfBelts list = new ListOfBelts();
     final List<Belt> belts = new ArrayList<>();
 
-    list.setTeamName("presenters");
+    list.setTeamName("Presenters");
 
     final Belt white = buildBelt("1", "white");
     final Belt yellow = buildBelt("2", "yellow");

@@ -4,6 +4,8 @@ import java.util.List;
 
 public class ListOfBelts {
 
+  private String id;
+
   private String teamName;
 
   private List<Belt> belts;
@@ -22,5 +24,13 @@ public class ListOfBelts {
 
   public void setTeamName(String teamName) {
     this.teamName = teamName;
+  }
+
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
   }
 }
