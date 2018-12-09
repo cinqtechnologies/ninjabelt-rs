@@ -2,9 +2,11 @@ package br.com.cinq.dojo.ninjabelt.rs.controller;
 
 import br.com.cinq.dojo.ninjabelt.rs.properties.EnvironmentProperties;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin
 @RestController
 public class GetEnvironmentController {
 
