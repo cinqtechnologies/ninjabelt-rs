@@ -6,7 +6,7 @@
 
   <groupId>br.com.cinq.dojo</groupId>
   <artifactId>ninjabelt-rs</artifactId>
-  <version>0.0.16</version>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>ninjabelt-rs</name>
