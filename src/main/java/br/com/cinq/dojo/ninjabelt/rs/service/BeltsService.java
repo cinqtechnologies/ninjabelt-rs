@@ -22,10 +22,8 @@ public class BeltsService {
 
   @PostConstruct
   public void loadPresenters() {
-    template.remove(Query.query(Criteria.where("belts[any].name").is("red")), ListOfBelts.class);
-    if (!template.exists(Query.query(Criteria.where("teamName").is("presenters")), ListOfBelts.class)) {
-      template.save(buildInitialListOfBelts());
-    }
+    template.remove(Query.query(Criteria.where("teamName").is("presenters")), ListOfBelts.class)
+    template.save(buildInitialListOfBelts());
   }
 
   private ListOfBelts buildInitialListOfBelts() {
