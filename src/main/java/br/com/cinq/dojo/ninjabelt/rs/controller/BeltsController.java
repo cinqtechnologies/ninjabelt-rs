@@ -52,6 +52,6 @@ public class BeltsController {
     if (beltsService.addBeltToTeam(teamName, beltColor)) {
       return ResponseEntity.ok().build();
     }
-    return ResponseEntity.noContent().build();
+    return ResponseEntity.badRequest().build();
   }
 }
